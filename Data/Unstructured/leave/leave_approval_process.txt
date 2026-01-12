@@ -1,0 +1,3 @@
+All leave requests are routed to the reporting manager for approval.
+HR maintains records of all approved and rejected leaves.
+

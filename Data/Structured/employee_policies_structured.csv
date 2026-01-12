@@ -1,0 +1,11 @@
+doc_id,title,category,content,last_modified
+1,Finance Policy,Finance,"The finance department manages payroll, reimbursements, audits, and compliance. Expense claims must adhere to company financial policies.",12/28/2025
+2,HR Policy,HR,"The HR department manages recruitment, onboarding, training, and employee welfare. All employees must follow company policies and the code of conduct.",12/28/2025
+3,IT Security Policy,IT,Employees must follow IT security guidelines. Passwords must be changed every 90 days. Unauthorized software installation is prohibited.,12/28/2025
+4,Leave Policy,HR,Employees are entitled to 20 days of paid leave annually. Leave requests must be approved by the reporting manager. Sick leave and casual leave policies apply as per company rules.,12/28/2025
+5,Work From Home Policy,HR,Employees may work remotely up to two days per week with manager approval. Guidelines for secure access to internal systems must be followed.,12/28/2025
+6,Expense Reimbursement,Finance,Employees must submit expense claims within 30 days. Receipts must be attached. Finance team reviews for compliance with reimbursement policy.,12/28/2025
+7,Data Protection Policy,IT,All employees must follow data protection and privacy policies. Confidential information must not be shared externally without authorization.,12/28/2025
+8,Training Policy,HR,All employees are required to complete mandatory training modules annually. Records are maintained by the HR department.,12/28/2025
+9,Travel Policy,Finance,Travel requests must be approved by the respective manager. Expenses must follow company travel guidelines.,12/28/2025
+10,Device Usage Policy,IT,Company devices must be used responsibly. Unauthorized software installation or tampering with devices is prohibited.,12/28/2025

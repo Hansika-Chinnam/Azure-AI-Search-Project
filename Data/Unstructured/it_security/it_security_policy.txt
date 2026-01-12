@@ -1,0 +1,3 @@
+Employees must follow IT security guidelines.
+Passwords must be changed every 90 days.
+Unauthorized software installation is prohibited.

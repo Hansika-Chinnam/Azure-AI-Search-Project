@@ -1,0 +1,2 @@
+Only approved software can be installed on company devices.
+IT monitors software compliance regularly.

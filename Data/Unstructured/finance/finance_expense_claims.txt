@@ -1,0 +1,2 @@
+Employees must submit expense claims within 30 days.
+Receipts are required for all claim submissions.

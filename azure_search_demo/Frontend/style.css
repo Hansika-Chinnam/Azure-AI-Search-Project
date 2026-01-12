@@ -1,0 +1,237 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Background */
+body {
+  font-family: "Nunito Sans", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #b9b9c9,   /* soft ice blue, a little darker */
+    #cedfee,   /* light pastel blue */
+    #c9c9d0    /* neutral light gray */
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #374151; /* neutral gray for body text */
+}
+
+
+/* Page container */
+.page-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* Search card */
+.search-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  /* ✅ Removed translateY so card stays centered */
+}
+
+/* Title */
+.search-card h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  color: #1e3a8a; /* deep professional blue */
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1rem;
+  color: #475569; /* slate gray */
+  margin-bottom: 30px;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Input */
+.search-box input {
+  width: 70%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  color: #374151;
+}
+
+.search-box input:focus {
+  border-color: #3b82f6; /* soft blue accent */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Button */
+.search-box button {
+  padding: 14px 26px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd); 
+  /* professional pastel blues */
+  color: white;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.35);
+}
+
+/* Results */
+.results {
+  margin-top: 20px;
+}
+
+/* Individual result card */
+.result-item {
+  background: #ffffff;
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.result-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.result-item h3 {
+  font-family: "Poppins", sans-serif;
+  color: #2563eb; /* professional blue accent */
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.result-item p {
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+#errorMessage {
+  color: #9b1212; /* soft red for errors */
+  margin-top: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+/* Last updated date */
+.result-item small {
+  color: #64748b; /* subtle slate gray */
+  font-size: 0.85rem;
+  display: block;
+}
+/* Tablet adjustments */
+@media (max-width: 900px) {
+  .search-card {
+    padding: 30px;
+  }
+
+  .search-card h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .search-box input {
+    width: 65%;
+  }
+
+  .search-box button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .search-card {
+    padding: 20px;
+  }
+
+  .search-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .result-item {
+    padding: 15px;
+  }
+
+  .result-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .result-item p {
+    font-size: 0.9rem;
+  }
+}
+/* Spinner */
+#spinner {
+  display: none;
+  margin: 20px auto;
+  border: 4px solid #e0e7ff;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+/* Spinner */
+#spinner {
+  display: none;              /* hidden by default */
+  margin: 20px auto;
+  border: 4px solid #e0e7ff;  /* light border */
+  border-top: 4px solid #3b82f6; /* accent color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+

@@ -1,0 +1,2 @@
+All network connections must be secured using VPN or company firewalls.
+Unauthorized network devices are prohibited.

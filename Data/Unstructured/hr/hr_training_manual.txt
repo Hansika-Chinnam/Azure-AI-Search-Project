@@ -1,0 +1,2 @@
+Employees should attend mandatory training sessions as scheduled.
+Training records are maintained by HR for compliance purposes.

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Knowledge Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-container">
+    <div class="search-card">
+      <h1>Employee Knowledge Search</h1>
+      <p class="subtitle">
+        Intelligent search powered by Azure AI Search
+      </p>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search policies...">
+        <button onclick="search()">Search</button>
+       </div>
+    </div>
+    <div id="spinner"></div>
+    <div id="errorMessage"></div>
+    <!-- Results inside page container -->
+    <div id="results"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

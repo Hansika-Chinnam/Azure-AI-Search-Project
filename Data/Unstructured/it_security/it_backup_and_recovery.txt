@@ -1,0 +1,2 @@
+All critical data must be backed up daily.
+IT ensures disaster recovery plans are tested periodically.

@@ -1,0 +1,2 @@
+Access to sensitive data is restricted based on roles.
+Managers must approve access requests.

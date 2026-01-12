@@ -1,0 +1,2 @@
+All endpoints must have antivirus and security patches up to date.
+Regular scans are performed to detect malware and vulnerabilities.
