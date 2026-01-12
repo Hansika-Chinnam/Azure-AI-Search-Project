@@ -3,7 +3,7 @@ name: Azure Functions CI/CD
 on:
   push:
     branches:
-      - main   # Runs every time you push to main
+      - main
 
 jobs:
   build-and-deploy:
@@ -26,10 +26,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r azure_search_demo/Backend/requirements.txt
 
-      # Step 4: Deploy to Azure Functions
+      # Step 4: Login to Azure using Service Principal
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Step 5: Deploy to Azure Functions
       - name: Deploy to Azure Functions
         uses: Azure/functions-action@v1
         with:
-          app-name: employee-search-api-b7aqatckevevbtdh   # 👈 exact Function App name
+          app-name: employee-search-api
           package: azure_search_demo/Backend
-          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
