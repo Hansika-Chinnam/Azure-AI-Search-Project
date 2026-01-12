@@ -22,7 +22,7 @@ function search() {
   spinner.style.display = "block";
 
   // Call backend with GET ?query
-  fetch(`http://localhost:7071/api/search?query=${encodeURIComponent(query)}`)
+  fetch(`/api/search?query=${encodeURIComponent(query)}`)
     .then(res => {
       if (!res.ok) {
         throw new Error("Backend unreachable");
