@@ -218,3 +218,8 @@ node_modules/
 
 # VS Code
 .vscode/
+
+# Ignore Word temp files
+~$*
+*.tmp
+
