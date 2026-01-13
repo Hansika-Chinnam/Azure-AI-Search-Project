@@ -1,3 +1,6 @@
+// Define the backend base URL once
+const API_BASE = "https://employee-search-api-b7aqatckevevbtdh.centralindia-01.azurewebsites.net/api";
+
 function search() {
   const query = document.getElementById("searchInput").value.trim();
   const resultsDiv = document.getElementById("results"); 
@@ -9,30 +12,27 @@ function search() {
   errorMessage.textContent = "";
 
   if (!query) {
-    // Show error message if input is empty
     errorMessage.innerHTML = "<p class='error-message'>Please type something to search.</p>";
-    resultsDiv.innerHTML = "";
     return;
-  } else {
-    // Clear error message when user types something
-    errorMessage.innerHTML = "";
   }
 
   // Show spinner while fetching
   spinner.style.display = "block";
 
-  // Call backend with GET ?query
-  fetch(`/api/search?query=${encodeURIComponent(query)}`)
-    .then(res => {
+  // Use API_BASE in fetch
+  fetch(`${API_BASE}/search?query=${encodeURIComponent(query)}`)
+    .then(async res => {
+      const data = await res.json().catch(() => null);
+
       if (!res.ok) {
-        throw new Error("Backend unreachable");
+        const message = data?.error || "Backend unreachable";
+        throw new Error(message);
       }
-      return res.json();
+      return data;
     })
     .then(data => {
       console.log("API response:", data);
 
-      // Hide spinner after response
       spinner.style.display = "none";
       resultsDiv.innerHTML = "";
 
@@ -51,14 +51,13 @@ function search() {
         const p = document.createElement("p");
         p.textContent = item.content || "No content available";
 
-        // ✅ Add last updated date
         const date = document.createElement("small");
         if (item.last_modified) {
           const d = new Date(item.last_modified);
           date.textContent = `Last updated: ${d.toDateString()}`;
-          date.style.color = "#666";      // light gray
-          date.style.fontSize = "0.9em";  // smaller font
-          date.style.display = "block";   // put on its own line
+          date.style.color = "#666";
+          date.style.fontSize = "0.9em";
+          date.style.display = "block";
         }
 
         div.appendChild(h3);
@@ -69,7 +68,7 @@ function search() {
     })
     .catch(err => {
       console.error(err);
-      spinner.style.display = "none"; // hide spinner on error
-      resultsDiv.innerHTML = "<p style='color:red'>Error connecting backend</p>";
+      spinner.style.display = "none";
+      resultsDiv.innerHTML = `<p style='color:red'>${err.message}</p>`;
     });
 }

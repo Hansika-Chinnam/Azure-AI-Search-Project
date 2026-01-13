@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "route": "/api/*",
-      "rewrite": "https://employee-search-api-b7aqatckevevbtdh.centralindia-01.azurewebsites.net/api/{*}"
-    }
-  ]
-}
