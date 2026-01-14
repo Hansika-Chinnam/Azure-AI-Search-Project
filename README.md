@@ -104,6 +104,7 @@ The project includes:
 - Deploy search-enabled website  
 - Enable fast, accurate internal search for employees  
 
+
 ---
 
 ## How to Run Locally
@@ -134,3 +135,8 @@ index.html
 5. Connect Azure AI Search keys in `.env` or `local.settings.json`
 
 6. Deploy using Azure Static Web Apps
+
+
+## Project Live Demo
+
+🔗 **Live Demo:** https://orange-hill-0df88df00.1.azurestaticapps.net
