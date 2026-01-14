@@ -135,9 +135,10 @@ index.html
 
 Project Live Demo:
 
-**Deployed App URL:**
+**Deployed Application:**
 
-https://orange-hill-0df88df00.1.azurestaticapps.net
+[Live Demo](https://orange-hill-0df88df00.1.azurestaticapps.net)
+
 
 
 
