@@ -107,53 +107,30 @@ The project includes:
 ---
 
 ## How to Run Locally
-1. Clone the repo:
 
+1. Clone the repo:
 ```bash
 git clone https://github.com/Hansika-Chinnam/Azure-AI-Search-Project.git
 cd Azure-AI-Search-Project
+```
 
-
-2.  Install dependencies:
+2. Install dependencies:
+```bash
 pip install -r azure_search_demo/Backend/requirements.txt
+```
 
-
-3.  Run backend (Azure Function App):
+3. Run backend (Azure Function App):
+```bash
 cd azure_search_demo/Backend
 func start
+```
 
-
-4.  Open frontend:
+4. Open frontend:
+```bash
 cd ../Frontend
 index.html
+```
 
+5. Connect Azure AI Search keys in `.env` or `local.settings.json`
 
-5.  Connect Azure AI Search keys in .env or local.settings.json
-
-6.  Deploy using Azure Static Web Apps
-
-
-Project Live Demo:
-
-**Deployed Application:**
-
-🔗 Live Demo: https://orange-hill-0df88df00.1.azurestaticapps.net
-
-
-
-
-
-
----
-
-### ✅ Next Steps
-
-1. Open your `README.md` in VS Code.  
-2. Paste the content above.  
-3. Save the file.  
-4. Run these commands in your project folder:
-
-```powershell
-git add README.md
-git commit -m "Add polished README.md for TCS iON project"
-git push
+6. Deploy using Azure Static Web Apps
